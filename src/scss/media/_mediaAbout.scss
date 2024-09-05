@@ -1,0 +1,41 @@
+@media screen and (max-width: 1200px) {
+.mainTitle{
+    font-size: 100px;
+    margin-left: 0;
+}
+.aboutInfo{
+    transform: translateX(20%);
+    top: 170px;
+}
+  }
+
+  @media screen and (max-width: 992px) {
+    .aboutInfo{
+        transform: translateX(0);
+        top: 170px;
+    }
+
+  }
+
+  @media screen and (max-width: 768px) {
+    .aboutInfo{
+        gap: 20px;
+    }
+    .infoSpace:last-child{
+        display: none;
+    }
+    .mainTitle{
+        font-size: 70px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+    .mainTitle{
+        font-size: 40px;
+        line-height: 60px;
+        padding-bottom: 240px;
+    }
+    .infoSpace:first-child{
+        display: none;
+    }
+
+  }

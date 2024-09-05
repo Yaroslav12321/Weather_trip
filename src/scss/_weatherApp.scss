@@ -1,0 +1,150 @@
+@import "_vars";
+@import "_mixin";
+@import "_fonts";
+
+.weatherAppMain {
+  margin-top: 90px;
+  &_input {
+    padding-left: 50px;
+    margin-top: 15px;
+    width: 500px;
+    height: 44px;
+    border: none;
+    border-radius: 100px;
+    outline: none;
+    background-color: $black50;
+    position: relative;
+  }
+  &_head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 45px;
+    .form {
+      position: relative;
+      &:before {
+        position: absolute;
+        content: url(../files/photo/search.png);
+        height: 24px;
+        width: 24px;
+        z-index: 1;
+        left: 10px;
+        transform: translateY(100%);
+      }
+    }
+  }
+  &_title {
+    @include font(32px, 500, 48px, start, $black600);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 15px;
+  }
+}
+.weatherApp {
+  &_text {
+    @include font(16px, 500, 24px, start, $black100);
+    font-family: "Poppins", sans-serif;
+  }
+  &_info {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(../files/photo/weatherAppBanner.png);
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    &_Lcolumn {
+      margin-top: 43px;
+      margin-left: 120px;
+      & > .weatherApp_text:last-of-type {
+        font-size: 68px;
+        color: $red500;
+      }
+    }
+  }
+  &_buttons {
+    margin-top: 60px;
+    margin-bottom: 45px;
+    display: flex;
+    justify-content: space-between;
+    &_day {
+      border: none;
+      background-color: transparent;
+      margin-right: 16px;
+      & > .text {
+        @include font(24px, 500, 36px, center, $black300);
+        font-family: "Poppins", sans-serif;
+        &:hover {
+          color: $black600;
+          cursor: pointer;
+        }
+      }
+    }
+    &_temp {
+      border: none;
+      border-radius: 50%;
+      background-color: $black50;
+      margin-left: 16px;
+      width: 35px;
+      height: 35px;
+      &:hover {
+        background-color: $purple400;
+      }
+      & > .text {
+        @include font(24px, 500, 36px, center, $black300);
+        font-family: "Poppins", sans-serif;
+        &:hover {
+          color: $red500;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  &_details {
+    margin-right: 125px;
+    padding: 10px 0;
+    .weatherApp_text {
+      color: $red500;
+      & > .iconstyle {
+        color: $red500;
+      }
+    }
+  }
+  &_city {
+    @include font(40px, 500, 60px, start, $red500);
+    font-family: "Poppins", sans-serif;
+  }
+  &_region {
+    @include font(16px, 500, 24px, start, $black100);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 60px;
+  }
+}
+.forecast{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 60px;
+    &_item{
+        display: flex;
+        justify-content: space-between;
+        border: 2px solid $black200;
+        border-radius: 20px;
+        padding: 10px 16px;
+        width: 235px;
+        .smalltext{
+            font-size: 12px;
+            color: $black200;
+        }
+        .darktext{
+            color: $black600;
+        }
+    }
+}
+
+.newsBtn {
+  width: 100%;
+  margin-bottom: 60px;
+  &_text {
+    @include font(20px, 400, 30px, center, $black500);
+    font-family: "Poppins", sans-serif;
+    margin: 20px 0;
+    text-decoration: none;
+    padding: 10px 100px;
+  }
+}

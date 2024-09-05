@@ -1,0 +1,30 @@
+    @media screen and (max-width: 1200px) {
+        .weatherApp{
+            margin-top: -250px;
+        }
+        .wheatherAppIntro{
+            flex-wrap: wrap;
+            flex-direction: column-reverse;
+            .wheatherAppIntro_Rcolumn{
+                margin-bottom: 60px;
+            }
+        }
+        .appMini_text{
+            float: right;
+        }
+    }
+    @media screen and (max-width: 768px) {
+        .weatherApp {
+            margin: 0 auto;
+        }
+    }
+    @media screen and (max-width: 480px) {
+        .weatherApp{
+            margin-left: 0;
+            padding: 0;
+        }
+        .wheatherAppIntro_photo > img{
+            width: 350px;
+        }
+        }
+  

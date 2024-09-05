@@ -1,0 +1,107 @@
+.banner {
+    background-image: url(../files/photo/newsBanner.png);
+    height: 450px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  &_title {
+    @include font(40px, bold, 24px, end, $red500);
+    font-family: "Times New Roman", sans-serif;
+    padding-top: 110px;
+    margin-bottom: 70px;
+    & > .small {
+      font-size: 20px;
+    }
+  }
+  &_subtitle {
+    @include font(20px, 400, 30px, end, white);
+    max-width: 500px;
+    float: inline-end;
+  }
+}
+
+.introductorynews {
+  display: flex;
+  margin-top: 110px;
+  margin-bottom: 130px;
+  gap: 148px;
+}
+.mainnews {
+  max-width: 746px;
+
+  &_title {
+    @include font(36px, 400, 41px, start, $black600);
+    font-family: "Times New Roman", sans-serif;
+    margin-bottom: 30px;
+  }
+  &_photo {
+    margin-bottom: 115px;
+  }
+  &_author {
+    display: flex;
+    .news_author_photo {
+      margin-right: 10px;
+    }
+  }
+  .about_author {
+    margin-right: 40px;
+  }
+  .author {
+    &_title {
+      @include font(16px, 700, 24px, center, $black600);
+      font-family: "Poppins", sans-serif;
+    }
+    &_subtitle {
+      @include font(12px, 400, 18px, start, $black200);
+      font-family: "Poppins", sans-serif;
+    }
+  }
+}
+.othernews {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    max-width: 235px;
+    &_title {
+      @include font(16px, 500, 24px, start, black);
+      font-family: "Poppins", sans-serif;
+      margin-bottom: 10px;
+    }
+    &_text {
+      @include font(16px, 400, 18px, start, $black600);
+      font-family: "Times New Roman", sans-serif;
+      margin-bottom: 20px;
+    }
+    &_link {
+      text-decoration: none;
+      @include font(12px, 400, 18px, start, $purple500);
+      font-family: "Poppins", sans-serif;
+    }
+  }
+  .newsBlock {
+    display: flex;
+    justify-content: space-between;
+  }
+  .featuredNews {
+    margin-bottom: 200px;
+    & > .someNew {
+      max-width: 491px;
+    }
+  }
+  .newsBlockTitle {
+    @include font(20px, 400, 30px, start, $black600);
+    font-family: "Poppins", sans-serif;
+    margin-bottom: 30px;
+  }
+  .someNew {
+    padding-bottom: 20px;
+    max-width: 363px;
+    & > .othernews_title {
+      text-align: center;
+    }
+    & > .othernews_text {
+      margin-bottom: 10px;
+    }
+    & > .othernews_link {
+      float: inline-end;
+    }
+  }

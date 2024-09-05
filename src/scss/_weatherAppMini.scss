@@ -1,0 +1,82 @@
+.weatherApp{
+    padding: 24px;
+    margin-top: -355px;
+    margin-left: 170px;
+    margin-bottom: 100px;
+    width: 367px;
+    background-color: $red500;
+    border-radius: 10px;
+    &_photo{
+        margin: 16px 0;
+    }
+
+    .dayInfo{
+        display: flex;
+        justify-content: space-between;
+        &_text{
+            @include font(12px, 400, 18px, start, $black600);
+            font-family: "Poppins",sans-serif;
+        }
+    }
+    .dayInfo_rightcolumn{
+        @include font(40px, 400, 60px, end, $black600);
+        font-family: "Poppins", sans-serif;
+        &:last-of-type{
+            font-size: 32px;
+            line-height: 48px;
+        }
+    }
+}
+.iconstyle{
+    font-size: 10px;
+    color: $purple500;
+    padding-right: 10px;
+}
+
+
+.weatherForecast {
+    text-align: center;
+  }
+  
+  .forecastContainer {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 20px;
+  }
+  
+
+  .forecastItem {
+    padding: 5px;
+    background-color: $purple300;
+    border-radius: 10px;
+    width: 120px;
+    text-align: center;
+    & > .iconstyle{
+        color: $red500;
+    }
+    &_info{
+        @include font(12px, 500, 18px, center, $red500);
+            font-family: "Poppins",sans-serif;
+    }
+  }
+  
+
+  .iconstyle {
+    font-size: 36px;
+    margin: 10px 0;
+  }
+
+  .form{    
+    display: flex;
+    justify-content: center;
+    &_input{
+        border: none;
+        text-align: center; 
+        @include font(16px, 600, 18px, center, $purple500);        
+    font-family: "Poppins", sans-serif;
+    outline: none;
+    background-color: $red500;
+    }
+  }
+  

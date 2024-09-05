@@ -1,0 +1,49 @@
+.mainHome{
+    background-color: $red500;
+}
+.homeBanner{
+    background-image: url(../files/photo/homeBanner.png);
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    & > .banner_title{
+        padding-top: 95px;
+        text-align: start;
+    }
+    & > .banner_subtitle{
+        text-align: start;
+        float: left;
+    }
+}
+.wheatherAppIntro{
+    margin-top: 75px;
+    margin-bottom: 75px;
+    display: flex; 
+    justify-content: space-between;
+    &_text{
+        @include font(24px, 400, 36px, start, $black600);
+        font-family: "Poppins", sans-serif;
+        max-width: 495px;
+        margin-bottom: 40px;
+        .blacktext{
+            font-weight: 600;
+        }
+    }
+    &_photo{
+        margin-top: 45px;
+    }
+}
+.appMini_title{
+    @include font(32px, 400, 48px, end, $black600);
+    font-family: "Poppins", sans-serif;
+}
+.appMini_text{
+    @include font(16px, 300, 24px, end, $black600);
+    font-family: "Poppins", sans-serif;
+    max-width: 513px;
+    margin-bottom: 15px;
+    margin-left: 25px;
+    & ~ .button{
+        float: right;
+    }
+}

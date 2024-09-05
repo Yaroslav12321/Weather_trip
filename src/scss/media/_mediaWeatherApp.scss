@@ -1,0 +1,23 @@
+@media screen and (max-width: 992px) {
+    .forecast{
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .weatherAppMain_input{
+        width: 300px;
+    }
+    .weatherApp_info_Lcolumn{
+        margin-left: 50px;
+    }
+    .weatherApp_details{
+        margin-right: 50px;
+    }
+  }
+  @media screen and (max-width: 480px) {
+.weatherAppMain_head{
+    flex-direction: column;
+}
+  }

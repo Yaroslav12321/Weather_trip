@@ -1,0 +1,62 @@
+.header {
+    background-color: $red500;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-color: $black100;
+      height: 25px;
+      width: 100%;
+      left: 0;
+    }
+    .timeZone {
+      height: 25px;
+      position: relative;
+      z-index: 1;
+    }
+    .brandLogo {
+      width: 60px;
+      height: 60px;
+    }
+    .nav {
+      height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      &_list {
+        display: flex;
+        gap: 56px;
+        &__item {
+          a {
+            color: $black600;
+            &:hover {
+              color: $purple500;
+            }
+          }
+          padding: 10px;
+          @include font(20px, 400, auto, center, $black600);
+          font-family: "Poppins", sans-serif;
+        }
+        .active-link {
+          color: $purple500;
+          font-weight: 600;
+          text-transform: uppercase;
+        }
+      }
+    }
+  } 
+  
+  .menu-icon {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+  }
+  
+  .menu-icon__line {
+    width: 30px;
+    height: 3px;
+    background-color: #000;
+    margin-bottom: 5px;
+  }

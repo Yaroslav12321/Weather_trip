@@ -1,0 +1,82 @@
+.mainAbout {
+    background-color: $white600;
+    padding-top: 130px;
+    padding-bottom: 130px;
+  }
+  .mainTitle {
+    position: relative;
+    z-index: 1;
+    @include font(145px, 400, 197px, start, $red50);
+    font-family: "OpenSans", sans-serif;
+    text-shadow: 0 4px 2px black;
+    margin-left: 120px;
+    margin-bottom: 50px;
+    padding-top: 130px;
+  }
+  .aboutInfo {
+    position: absolute;
+    top: 220px;
+    transform: translateX(77%);
+    display: flex;
+    gap: 60px;
+    .infoSpace {
+      width: 210px;
+      border-radius: 105px;
+      &_title {
+        @include font(16px, 600, 19px, center, $black600);
+        font-family: "Inter", sans-serif;
+        .hash {
+          color: $purple300;
+        }
+      }
+      &_text {
+        width: 125px;
+        @include font(20px, 500, 24px, center, $black600);
+        margin-top: 30px;
+        margin-bottom: 90px;
+      }
+      &_img {
+        margin-left: -45px;
+      }
+      &:nth-of-type(2) {
+        border: black solid 1px;
+        padding-top: 80px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      &:last-child {
+        background: white;
+      }
+    }
+  }
+  .linkBlock {
+    margin-left: 125px;
+    padding-bottom: 130px;
+    display: flex;
+    gap: 34px;
+    .linkBtn {
+      width: 220px;
+      height: 45px;
+      background-color: $black500;
+      border: none;
+      border-radius: calc(45px / 2);
+      &_text {
+        @include font(16px, 500, 24px, center, white);
+        font-family: "Poppins", sans-serif;
+      }
+      &:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+      }
+    }
+    .socialLink {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      & > .socialLink_svg {
+        width: 24px;
+        height: 24px;
+      }
+    }
+  }

@@ -1,0 +1,921 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+.weatherApp {
+  padding: 24px;
+  margin-top: -355px;
+  margin-left: 170px;
+  margin-bottom: 100px;
+  width: 367px;
+  background-color: rgb(254, 250, 249);
+  border-radius: 10px;
+}
+.weatherApp_photo {
+  margin: 16px 0;
+}
+.weatherApp .dayInfo {
+  display: flex;
+  justify-content: space-between;
+}
+.weatherApp .dayInfo_text {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: start;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+}
+.weatherApp .dayInfo_rightcolumn {
+  font-size: 40px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: end;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+}
+.weatherApp .dayInfo_rightcolumn:last-of-type {
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.iconstyle {
+  font-size: 10px;
+  color: rgb(105, 55, 245);
+  padding-right: 10px;
+}
+
+.weatherForecast {
+  text-align: center;
+}
+
+.forecastContainer {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.forecastItem {
+  padding: 5px;
+  background-color: rgb(155, 121, 248);
+  border-radius: 10px;
+  width: 120px;
+  text-align: center;
+}
+.forecastItem > .iconstyle {
+  color: rgb(254, 250, 249);
+}
+.forecastItem_info {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+  text-align: center;
+  color: rgb(254, 250, 249);
+  font-family: "Poppins", sans-serif;
+}
+
+.iconstyle {
+  font-size: 36px;
+  margin: 10px 0;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+}
+.form_input {
+  border: none;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
+  color: rgb(105, 55, 245);
+  font-family: "Poppins", sans-serif;
+  outline: none;
+  background-color: rgb(254, 250, 249);
+}
+
+.weatherAppMain {
+  margin-top: 90px;
+}
+.weatherAppMain_input {
+  padding-left: 50px;
+  margin-top: 15px;
+  width: 500px;
+  height: 44px;
+  border: none;
+  border-radius: 100px;
+  outline: none;
+  background-color: rgb(231, 231, 231);
+  position: relative;
+}
+.weatherAppMain_head {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 45px;
+}
+.weatherAppMain_head .form {
+  position: relative;
+}
+.weatherAppMain_head .form:before {
+  position: absolute;
+  content: url(../files/photo/search.png);
+  height: 24px;
+  width: 24px;
+  z-index: 1;
+  left: 10px;
+  transform: translateY(100%);
+}
+.weatherAppMain_title {
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 48px;
+  text-align: start;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 15px;
+}
+
+.weatherApp_text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: start;
+  color: rgb(181, 181, 181);
+  font-family: "Poppins", sans-serif;
+}
+.weatherApp_info {
+  display: flex;
+  justify-content: space-between;
+  background-image: url(../files/photo/weatherAppBanner.png);
+  background-repeat: no-repeat;
+  border-radius: 20px;
+}
+.weatherApp_info_Lcolumn {
+  margin-top: 43px;
+  margin-left: 120px;
+}
+.weatherApp_info_Lcolumn > .weatherApp_text:last-of-type {
+  font-size: 68px;
+  color: rgb(254, 250, 249);
+}
+.weatherApp_buttons {
+  margin-top: 60px;
+  margin-bottom: 45px;
+  display: flex;
+  justify-content: space-between;
+}
+.weatherApp_buttons_day {
+  border: none;
+  background-color: transparent;
+  margin-right: 16px;
+}
+.weatherApp_buttons_day > .text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  color: rgb(94, 94, 94);
+  font-family: "Poppins", sans-serif;
+}
+.weatherApp_buttons_day > .text:hover {
+  color: rgb(14, 14, 14);
+  cursor: pointer;
+}
+.weatherApp_buttons_temp {
+  border: none;
+  border-radius: 50%;
+  background-color: rgb(231, 231, 231);
+  margin-left: 16px;
+  width: 35px;
+  height: 35px;
+}
+.weatherApp_buttons_temp:hover {
+  background-color: rgb(135, 95, 247);
+}
+.weatherApp_buttons_temp > .text {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 36px;
+  text-align: center;
+  color: rgb(94, 94, 94);
+  font-family: "Poppins", sans-serif;
+}
+.weatherApp_buttons_temp > .text:hover {
+  color: rgb(254, 250, 249);
+  cursor: pointer;
+}
+.weatherApp_details {
+  margin-right: 125px;
+  padding: 10px 0;
+}
+.weatherApp_details .weatherApp_text {
+  color: rgb(254, 250, 249);
+}
+.weatherApp_details .weatherApp_text > .iconstyle {
+  color: rgb(254, 250, 249);
+}
+.weatherApp_city {
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 60px;
+  text-align: start;
+  color: rgb(254, 250, 249);
+  font-family: "Poppins", sans-serif;
+}
+.weatherApp_region {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: start;
+  color: rgb(181, 181, 181);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 60px;
+}
+
+.forecast {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 60px;
+}
+.forecast_item {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid rgb(145, 145, 145);
+  border-radius: 20px;
+  padding: 10px 16px;
+  width: 235px;
+}
+.forecast_item .smalltext {
+  font-size: 12px;
+  color: rgb(145, 145, 145);
+}
+.forecast_item .darktext {
+  color: rgb(14, 14, 14);
+}
+
+.newsBtn {
+  width: 100%;
+  margin-bottom: 60px;
+}
+.newsBtn_text {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: center;
+  color: rgb(15, 15, 15);
+  font-family: "Poppins", sans-serif;
+  margin: 20px 0;
+  text-decoration: none;
+  padding: 10px 100px;
+}
+
+.header {
+  background-color: rgb(254, 250, 249);
+  position: relative;
+}
+.header::before {
+  position: absolute;
+  content: "";
+  background-color: rgb(181, 181, 181);
+  height: 25px;
+  width: 100%;
+  left: 0;
+}
+.header .timeZone {
+  height: 25px;
+  position: relative;
+  z-index: 1;
+}
+.header .brandLogo {
+  width: 60px;
+  height: 60px;
+}
+.header .nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .nav_list {
+  display: flex;
+  gap: 56px;
+}
+.header .nav_list__item {
+  padding: 10px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: auto;
+  text-align: center;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+}
+.header .nav_list__item a {
+  color: rgb(14, 14, 14);
+}
+.header .nav_list__item a:hover {
+  color: rgb(105, 55, 245);
+}
+.header .nav_list .active-link {
+  color: rgb(105, 55, 245);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.menu-icon {
+  display: none;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 25px;
+}
+
+.menu-icon__line {
+  width: 30px;
+  height: 3px;
+  background-color: #000;
+  margin-bottom: 5px;
+}
+
+.mainHome {
+  background-color: rgb(254, 250, 249);
+}
+
+.homeBanner {
+  background-image: url(../files/photo/homeBanner.png);
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.homeBanner > .banner_title {
+  padding-top: 95px;
+  text-align: start;
+}
+.homeBanner > .banner_subtitle {
+  text-align: start;
+  float: left;
+}
+
+.wheatherAppIntro {
+  margin-top: 75px;
+  margin-bottom: 75px;
+  display: flex;
+  justify-content: space-between;
+}
+.wheatherAppIntro_text {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 36px;
+  text-align: start;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+  max-width: 495px;
+  margin-bottom: 40px;
+}
+.wheatherAppIntro_text .blacktext {
+  font-weight: 600;
+}
+.wheatherAppIntro_photo {
+  margin-top: 45px;
+}
+
+.appMini_title {
+  font-size: 32px;
+  font-weight: 400;
+  line-height: 48px;
+  text-align: end;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+}
+
+.appMini_text {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 24px;
+  text-align: end;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+  max-width: 513px;
+  margin-bottom: 15px;
+  margin-left: 25px;
+}
+.appMini_text ~ .button {
+  float: right;
+}
+
+.mainAbout {
+  background-color: rgb(209, 209, 209);
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.mainTitle {
+  position: relative;
+  z-index: 1;
+  font-size: 145px;
+  font-weight: 400;
+  line-height: 197px;
+  text-align: start;
+  color: rgb(255, 255, 254);
+  font-family: "OpenSans", sans-serif;
+  text-shadow: 0 4px 2px black;
+  margin-left: 120px;
+  margin-bottom: 50px;
+  padding-top: 130px;
+}
+
+.aboutInfo {
+  position: absolute;
+  top: 220px;
+  transform: translateX(77%);
+  display: flex;
+  gap: 60px;
+}
+.aboutInfo .infoSpace {
+  width: 210px;
+  border-radius: 105px;
+}
+.aboutInfo .infoSpace_title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+  text-align: center;
+  color: rgb(14, 14, 14);
+  font-family: "Inter", sans-serif;
+}
+.aboutInfo .infoSpace_title .hash {
+  color: rgb(155, 121, 248);
+}
+.aboutInfo .infoSpace_text {
+  width: 125px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(14, 14, 14);
+  margin-top: 30px;
+  margin-bottom: 90px;
+}
+.aboutInfo .infoSpace_img {
+  margin-left: -45px;
+}
+.aboutInfo .infoSpace:nth-of-type(2) {
+  border: black solid 1px;
+  padding-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.aboutInfo .infoSpace:last-child {
+  background: white;
+}
+
+.linkBlock {
+  margin-left: 125px;
+  padding-bottom: 130px;
+  display: flex;
+  gap: 34px;
+}
+.linkBlock .linkBtn {
+  width: 220px;
+  height: 45px;
+  background-color: rgb(15, 15, 15);
+  border: none;
+  border-radius: 22.5px;
+}
+.linkBlock .linkBtn_text {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: center;
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.linkBlock .linkBtn:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+}
+.linkBlock .socialLink {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.linkBlock .socialLink > .socialLink_svg {
+  width: 24px;
+  height: 24px;
+}
+
+.banner {
+  background-image: url(../files/photo/newsBanner.png);
+  height: 450px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.banner_title {
+  font-size: 40px;
+  font-weight: bold;
+  line-height: 24px;
+  text-align: end;
+  color: rgb(254, 250, 249);
+  font-family: "Times New Roman", sans-serif;
+  padding-top: 110px;
+  margin-bottom: 70px;
+}
+.banner_title > .small {
+  font-size: 20px;
+}
+.banner_subtitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: end;
+  color: white;
+  max-width: 500px;
+  float: inline-end;
+}
+
+.introductorynews {
+  display: flex;
+  margin-top: 110px;
+  margin-bottom: 130px;
+  gap: 148px;
+}
+
+.mainnews {
+  max-width: 746px;
+}
+.mainnews_title {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 41px;
+  text-align: start;
+  color: rgb(14, 14, 14);
+  font-family: "Times New Roman", sans-serif;
+  margin-bottom: 30px;
+}
+.mainnews_photo {
+  margin-bottom: 115px;
+}
+.mainnews_author {
+  display: flex;
+}
+.mainnews_author .news_author_photo {
+  margin-right: 10px;
+}
+.mainnews .about_author {
+  margin-right: 40px;
+}
+.mainnews .author_title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+}
+.mainnews .author_subtitle {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: start;
+  color: rgb(145, 145, 145);
+  font-family: "Poppins", sans-serif;
+}
+
+.othernews {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  max-width: 235px;
+}
+.othernews_title {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  text-align: start;
+  color: black;
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 10px;
+}
+.othernews_text {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: start;
+  color: rgb(14, 14, 14);
+  font-family: "Times New Roman", sans-serif;
+  margin-bottom: 20px;
+}
+.othernews_link {
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 18px;
+  text-align: start;
+  color: rgb(105, 55, 245);
+  font-family: "Poppins", sans-serif;
+}
+
+.newsBlock {
+  display: flex;
+  justify-content: space-between;
+}
+
+.featuredNews {
+  margin-bottom: 200px;
+}
+.featuredNews > .someNew {
+  max-width: 491px;
+}
+
+.newsBlockTitle {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
+  text-align: start;
+  color: rgb(14, 14, 14);
+  font-family: "Poppins", sans-serif;
+  margin-bottom: 30px;
+}
+
+.someNew {
+  padding-bottom: 20px;
+  max-width: 363px;
+}
+.someNew > .othernews_title {
+  text-align: center;
+}
+.someNew > .othernews_text {
+  margin-bottom: 10px;
+}
+.someNew > .othernews_link {
+  float: inline-end;
+}
+
+.footer {
+  background-color: rgb(231, 228, 227);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_logo {
+  width: 100px;
+  height: 100px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+}
+.footer .footerNav {
+  display: flex;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+.footer .footerNav .footerLink {
+  color: rgb(94, 94, 94);
+  width: 24px;
+  height: 24px;
+  padding: 10px;
+}
+.footer .footerNav .footerLink:hover {
+  color: rgb(155, 121, 248);
+}
+.footer_title {
+  width: 485px;
+  margin-bottom: 40px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: auto;
+  text-align: center;
+  color: rgb(94, 94, 94);
+  font-family: "Poppins", sans-serif;
+}
+
+.ops {
+  font-size: 60px;
+  color: indigo;
+  text-align: center;
+}
+
+.header, .mediasection, .footer {
+  padding: 0 calc(50vw - 627.5px);
+}
+@media screen and (max-width: 1200px) {
+  .header, .mediasection, .footer {
+    padding: 0 calc(50vw - (627.5px - 12%));
+  }
+}
+@media screen and (max-width: 992px) {
+  .header, .mediasection, .footer {
+    padding: 0 calc(50vw - (627.5px - 26.5%));
+  }
+}
+@media screen and (max-width: 768px) {
+  .header, .mediasection, .footer {
+    padding: 0 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .header, .mediasection, .footer {
+    padding: 0;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .weatherApp {
+    margin-top: -250px;
+  }
+  .wheatherAppIntro {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+  .wheatherAppIntro .wheatherAppIntro_Rcolumn {
+    margin-bottom: 60px;
+  }
+  .appMini_text {
+    float: right;
+  }
+}
+@media screen and (max-width: 768px) {
+  .weatherApp {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .weatherApp {
+    margin-left: 0;
+    padding: 0;
+  }
+  .wheatherAppIntro_photo > img {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .introductorynews {
+    flex-direction: column;
+  }
+  .othernews {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+  .othernews_text {
+    width: 235px;
+  }
+  .newsBlock {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .mainnews_photo > img {
+    width: 480px;
+  }
+  .mainnews_author {
+    flex-direction: column;
+  }
+  .mainnews_author .author_subtitle, .mainnews_author .about_author, .mainnews_author .news_author_photo {
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mainnews_photo > img, .someNew > img {
+    width: 350px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .forecast {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .weatherAppMain_input {
+    width: 300px;
+  }
+  .weatherApp_info_Lcolumn {
+    margin-left: 50px;
+  }
+  .weatherApp_details {
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .weatherAppMain_head {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footerNav {
+    flex-direction: column;
+  }
+  .footer_title {
+    width: 300px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .nav_list {
+    display: none !important;
+    flex-direction: column;
+    position: absolute;
+    z-index: 2;
+    top: 90px;
+    right: 0;
+    background-color: #fff;
+    width: 200px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  .nav_list.open {
+    display: flex !important;
+  }
+  .nav_list__item {
+    margin: 10px 0;
+    text-align: center;
+  }
+  .menu-icon {
+    display: flex;
+  }
+  .brandLogo {
+    max-width: 120px;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .mainTitle {
+    font-size: 100px;
+    margin-left: 0;
+  }
+  .aboutInfo {
+    transform: translateX(20%);
+    top: 170px;
+  }
+}
+@media screen and (max-width: 992px) {
+  .aboutInfo {
+    transform: translateX(0);
+    top: 170px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .aboutInfo {
+    gap: 20px;
+  }
+  .infoSpace:last-child {
+    display: none;
+  }
+  .mainTitle {
+    font-size: 70px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .mainTitle {
+    font-size: 40px;
+    line-height: 60px;
+    padding-bottom: 240px;
+  }
+  .infoSpace:first-child {
+    display: none;
+  }
+}
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+}
+ul li a {
+  text-decoration: none;
+}
+
+.button {
+  border: 3px solid rgb(135, 95, 247);
+  background-color: rgb(135, 95, 247);
+  height: 35px;
+  margin: auto 0;
+  border-radius: 17.5px;
+}
+.button_text, .button_link {
+  padding: 10px 100px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 15px;
+  text-align: center;
+  color: rgb(254, 250, 249);
+  font-family: "Inter", sans-serif;
+}
+.button_link {
+  text-decoration: none;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: transparent;
+}
+.button:hover .button_text, .button:hover .button_link {
+  color: rgb(135, 95, 247);
+}/*# sourceMappingURL=main.css.map */

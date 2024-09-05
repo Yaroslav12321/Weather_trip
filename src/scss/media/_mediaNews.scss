@@ -1,0 +1,35 @@
+@media screen and (max-width: 1200px) {
+.introductorynews{
+    flex-direction: column;
+}
+.othernews{
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    &_text{
+        width: 235px;
+    }
+}
+.newsBlock{
+    flex-direction: column;
+    align-items: center;
+}
+}
+@media screen and (max-width: 768px) {
+.mainnews_photo > img{
+    width: 480px;
+}
+.mainnews_author{
+    flex-direction: column;
+    .author_subtitle, .about_author, .news_author_photo {
+        margin: 0 auto;
+    }
+}
+}
+@media screen and (max-width: 480px) {
+    .mainnews_photo > img, .someNew > img{
+        width: 350px;
+    }
+
+    }

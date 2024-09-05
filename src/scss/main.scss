@@ -1,0 +1,58 @@
+@import "_vars";
+@import "_mixin";
+@import "_fonts";
+@import "_weatherAppMini";
+@import "_weatherApp";
+@import "_header";
+@import "_home";
+@import "_about";
+@import "_news";
+@import "_footer";
+@import "_notFoundPage";
+@import "./media/media";
+@import "./media/_mediaHome";
+@import "./media/_mediaNews";
+@import "./media/_mediaWeatherApp";
+@import "./media/_mediaFooter";
+@import "./media/_mediaHeader";
+@import "./media/_mediaAbout";
+
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+ul {
+  li {
+    list-style: none;
+    text-decoration: none;
+    a {
+      text-decoration: none;
+    }
+  }
+}
+
+.button {
+border: 3px solid $purple400;
+  background-color: $purple400;
+  height: 35px;
+  margin: auto 0;
+  border-radius: calc(35px / 2);
+  &_text, &_link {
+    padding: 10px 100px;
+    @include font(12px, 400, 15px, center, $red500);
+    font-family: "Inter", sans-serif;
+  }
+  &_link{
+    text-decoration: none;
+  }
+  &:hover{
+    cursor: pointer;
+    background-color: transparent;
+    .button_text, .button_link{
+        color: $purple400;
+    }
+  }
+}
+
