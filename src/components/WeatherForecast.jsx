@@ -49,7 +49,7 @@ const WeatherForecast = ({ coordinates }) => {
         <div key={index} className="forecastItem">
           <p className="forecastItem_info">{time}</p>
           <i className={`wi wi-${iconClass} iconstyle`}></i>
-          <p className="forecastItem_info">{temperature}°C</p>
+          <p className="forecastItem_info">{temperature / 10}°C</p>
         </div>
       );
     });
