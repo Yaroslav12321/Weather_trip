@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/Weather_trip/static/css/main.1dba0dba.css",
+    "main.js": "/Weather_trip/static/js/main.dd6d96f6.js",
+    "static/media/newsBanner.png": "/Weather_trip/static/media/newsBanner.421cb2f4ca0f8f5ccbdb.png",
+    "static/media/homeBanner.png": "/Weather_trip/static/media/homeBanner.4f7593273f2a1d0c8124.png",
+    "static/media/introductoryNews.png": "/Weather_trip/static/media/introductoryNews.7e7e3b0b5a0343cb4172.png",
+    "static/media/weatherAppBanner.png": "/Weather_trip/static/media/weatherAppBanner.a4ecaad4fe3131e6fff7.png",
+    "static/media/logo.png": "/Weather_trip/static/media/logo.3e2812270daadcde7725.png",
+    "static/media/FNews2.png": "/Weather_trip/static/media/FNews2.c472bdeae3288d6a4f1c.png",
+    "static/media/brNews2.png": "/Weather_trip/static/media/brNews2.d336e1cf0cbc8c336851.png",
+    "static/media/authorPhoto.png": "/Weather_trip/static/media/authorPhoto.2df7c4b71470bbf92880.png",
+    "static/media/FNews1.png": "/Weather_trip/static/media/FNews1.0bd7e61f3fe9762af7eb.png",
+    "static/media/weatherIntro.png": "/Weather_trip/static/media/weatherIntro.94a9a7357dbe841f2da1.png",
+    "static/media/brNews3.png": "/Weather_trip/static/media/brNews3.496e1c757717c01a5d6c.png",
+    "static/media/brNews1.png": "/Weather_trip/static/media/brNews1.6343041bcd3148158abb.png",
+    "static/media/weatherAppPhoto.png": "/Weather_trip/static/media/weatherAppPhoto.513dbb9cc25577f6d5b2.png",
+    "static/media/aboutInfoPhoto.png": "/Weather_trip/static/media/aboutInfoPhoto.d8c225ab5b985f31ef13.png",
+    "static/media/instagram.svg": "/Weather_trip/static/media/instagram.8718701da6dd7f545c68b56a1af2c699.svg",
+    "static/media/github.svg": "/Weather_trip/static/media/github.3a81d72db95f4c37d60e12906bded086.svg",
+    "static/media/linkedin.svg": "/Weather_trip/static/media/linkedin.f41a54a0086e88ef86dba97f5ec1b11e.svg",
+    "index.html": "/Weather_trip/index.html",
+    "main.1dba0dba.css.map": "/Weather_trip/static/css/main.1dba0dba.css.map",
+    "main.dd6d96f6.js.map": "/Weather_trip/static/js/main.dd6d96f6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1dba0dba.css",
+    "static/js/main.dd6d96f6.js"
+  ]
+}
