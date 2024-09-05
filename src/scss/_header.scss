@@ -34,7 +34,7 @@
             }
           }
           padding: 10px;
-          @include font(20px, 400, auto, center, $black600);
+          @include font(20px, 400, 20px, center, $black600);
           font-family: "Poppins", sans-serif;
         }
         .active-link {

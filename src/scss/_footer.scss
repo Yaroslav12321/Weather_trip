@@ -26,7 +26,7 @@
     &_title {
       width: 485px;
       margin-bottom: 40px;
-      @include font(16px, 400, auto, center, $black300);
+      @include font(16px, 400, 16px, center, $black300);
       font-family: "Poppins", sans-serif;
     }
   }
