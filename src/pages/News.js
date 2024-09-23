@@ -53,7 +53,7 @@ function News() {
               elementum. Faucibus faucibus tempor habitasse amet auctor. Sit
               lorem a cursus a.
             </p>
-            <a className="othernews_link" href="#">
+            <a className="othernews_link" >
               Access article
             </a>
           </div>
@@ -64,7 +64,7 @@ function News() {
               elementum. Faucibus faucibus tempor habitasse amet auctor. Sit
               lorem a cursus a.
             </p>
-            <a className="othernews_link" href="#">
+            <a className="othernews_link">
               Access article
             </a>
           </div>
@@ -75,7 +75,7 @@ function News() {
               elementum. Faucibus faucibus tempor habitasse amet auctor. Sit
               lorem a cursus a.
             </p>
-            <a className="othernews_link" href="#">
+            <a className="othernews_link">
               Access article
             </a>
           </div>
@@ -86,7 +86,7 @@ function News() {
               elementum. Faucibus faucibus tempor habitasse amet auctor. Sit
               lorem a cursus a.
             </p>
-            <a className="othernews_link" href="#">
+            <a className="othernews_link">
               Access article
             </a>
           </div>
@@ -103,7 +103,7 @@ function News() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link">
               Access article
             </a>
         </div>
@@ -115,7 +115,7 @@ function News() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link">
               Access article
             </a>
         </div>
@@ -127,7 +127,7 @@ function News() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link">
               Access article
             </a>
         </div>
@@ -144,7 +144,7 @@ function News() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link">
               Access article
             </a>
         </div>
@@ -156,7 +156,7 @@ function News() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link">
               Access article
             </a>
         </div>

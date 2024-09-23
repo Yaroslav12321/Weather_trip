@@ -10,7 +10,6 @@ const API_KEY=process.env.REACT_APP_API_KEY;
 
 const Currentweather = () => {
   const [weatherData, setWeatherData] = useState(null);
-  const [error, setError] = useState(null);
   const [city, setCity] = useState('Mostyska'); 
   const [coordinates, setCoordinates] = useState({ lat: 49.79, lon: 23.14 });
 
