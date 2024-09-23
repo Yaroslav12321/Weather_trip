@@ -26,11 +26,11 @@ function News() {
             a cursus a. Donec vitae massa et lectus dolor in.
           </h2>
           <div className="mainnews_photo">
-            <img src={introdyctoryNews}></img>
+            <img src={introdyctoryNews} alt="news"></img>
           </div>
           <div className="mainnews_author">
             <div className="news_author_photo">
-              <img src={newsauthor}></img>
+              <img src={newsauthor} alt="author"></img>
             </div>
             <div className="about_author">
               <p className="author_title">Becky Ferreira</p>
@@ -96,7 +96,7 @@ function News() {
         <h3 className="newsBlockTitle">Breaking News</h3>
         <div className="newsBlock">
         <div className="someNew">
-          <img src={brNews1}></img>
+          <img src={brNews1} alt="news"></img>
           <h4 className="othernews_title">BBC news</h4>
           <p className="othernews_text">
             Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat
@@ -108,7 +108,7 @@ function News() {
             </a>
         </div>
         <div className="someNew">
-          <img src={brNews2}></img>
+          <img src={brNews2}  alt="news"></img>
           <h4 className="othernews_title">BBC news</h4>
           <p className="othernews_text">
             Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat
@@ -120,7 +120,7 @@ function News() {
             </a>
         </div>
         <div className="someNew">
-          <img src={brNews3}></img>
+          <img src={brNews3}  alt="news"></img>
           <h4 className="othernews_title">BBC news</h4>
           <p className="othernews_text">
             Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat
@@ -137,7 +137,7 @@ function News() {
       <h3 className="newsBlockTitle">Featured</h3>
       <div className="newsBlock featuredNews">
       <div className="someNew">
-          <img src={FNews1}></img>
+          <img src={FNews1}  alt="news"></img>
           <h4 className="othernews_title">BBC news</h4>
           <p className="othernews_text">
             Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat
@@ -149,7 +149,7 @@ function News() {
             </a>
         </div>
         <div className="someNew">
-          <img src={FNews2}></img>
+          <img src={FNews2}  alt="news"></img>
           <h4 className="othernews_title">BBC news</h4>
           <p className="othernews_text">
             Lorem ipsum dolor sit amet consectetur. Amet tortor tempor feugiat

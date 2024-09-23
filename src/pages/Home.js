@@ -24,7 +24,7 @@ function Home() {
             <span className="button_text">Explore</span>
           </button>
           <div className="wheatherAppIntro_photo">
-            <img src={weatherIntro}></img>
+            <img src={weatherIntro} alt="intro"></img>
           </div>
         </div>
         <div className="wheatherAppIntro_Rcolumn">
