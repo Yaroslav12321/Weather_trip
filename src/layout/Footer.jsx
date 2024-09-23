@@ -16,8 +16,8 @@ function Footer() {
       </ul>
       <ul className="footerNav">
         <li className="footerNav_list"><a className="footerLink" href="https://www.linkedin.com/feed/"><object className="footerLink_svg" type="image/svg+xml" data= { linkedin } alt="Description of the image"></object></a></li>
-        <li className="footerNav_list"><a className="footerLink" href="#"><object className="footerLink_svg" type="image/svg+xml" data= { instagram } alt="Description of the image"></object></a></li>
-        <li className="footerNav_list"><a className="footerLink" href="#"><object className="footerLink_svg" type="image/svg+xml" data= { github } alt="Description of the image"></object></a></li>
+        <li className="footerNav_list"><a className="footerLink" href="https://www.instagram.com/yaroslav_homa"><object className="footerLink_svg" type="image/svg+xml" data= { instagram } alt="Description of the image"></object></a></li>
+        <li className="footerNav_list"><a className="footerLink" href="https://github.com/dashboard"><object className="footerLink_svg" type="image/svg+xml" data= { github } alt="Description of the image"></object></a></li>
       </ul>
       <p className="footer_title">
         Website developed by João Marcos for personal and non-commercial
