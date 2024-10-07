@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { DaysOfWeek, TimeOfDay } from "./DateTimeZone";
 import { getWeatherIconClass } from "./WeatherIcon";
 import { WeatherForecast } from './WeatherForecast'; 
@@ -6,7 +6,7 @@ import axios from 'axios';
 import weatherAppPhoto from "../files/photo/weatherAppPhoto.png";
 import '../css/main.css';
 
-const API_KEY=process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const Currentweather = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -24,6 +24,7 @@ const Currentweather = () => {
           lat: response.data[0].lat,
           lon: response.data[0].lon
         });
+        setError(null); // Clear error if successful
       } else {
         setError('City not found.');
       }
@@ -32,20 +33,21 @@ const Currentweather = () => {
     }
   };
 
-  const fetchWeatherData = async () => {
+  const fetchWeatherData = useCallback(async () => {
     try {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${API_KEY}`
       );
       setWeatherData(response.data);
+      setError(null); // Clear error if successful
     } catch (error) {
       setError('Failed to fetch weather data.');
     }
-  };
+  }, [coordinates.lat, coordinates.lon]); // memoize based on coordinates
 
   useEffect(() => {
     fetchWeatherData();
-  }, [coordinates]);
+  }, [fetchWeatherData]);
 
   const handleCityChange = (event) => {
     setCity(event.target.value);
@@ -63,6 +65,9 @@ const Currentweather = () => {
     }
   };
 
+  if (error) {
+    return <div>Error: {error}</div>; // Render error if it exists
+  }
 
   if (!weatherData) {
     return <div>Loading...</div>;
@@ -75,7 +80,7 @@ const Currentweather = () => {
       <h2 className="weatherApp_city">
         <form className="form" onSubmit={handleCitySubmit}>
         <input
-        className=" form_input" 
+        className="form_input" 
           type="text" 
           placeholder="Enter city"  
           value={city} 
