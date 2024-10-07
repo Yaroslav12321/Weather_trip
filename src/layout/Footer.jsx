@@ -9,10 +9,10 @@ function Footer() {
     <footer className="footer">
       <img className="footer_logo" src={ logo } alt="logo" />
       <ul className="footerNav">
-        <li className="footerNav_list"><a className="footerLink" href="#">Usless Link</a></li>
-        <li className="footerNav_list"><a className="footerLink" href="#">Usless Link</a></li>
-        <li className="footerNav_list"><a className="footerLink" href="#">Usless Link</a></li>
-        <li className="footerNav_list"><a className="footerLink" href="#">Usless Link</a></li>
+        <li className="footerNav_list"><a className="footerLink" href="https://github.com/Yaroslav12321">Usless Link</a></li>
+        <li className="footerNav_list"><a className="footerLink" href="https://github.com/Yaroslav12321">Usless Link</a></li>
+        <li className="footerNav_list"><a className="footerLink" href="https://github.com/Yaroslav12321">Usless Link</a></li>
+        <li className="footerNav_list"><a className="footerLink" href="https://github.com/Yaroslav12321">Usless Link</a></li>
       </ul>
       <ul className="footerNav">
         <li className="footerNav_list"><a className="footerLink" href="https://www.linkedin.com/feed/"><object className="footerLink_svg" type="image/svg+xml" data= { linkedin } alt="Description of the image"></object></a></li>

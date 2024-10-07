@@ -19,7 +19,7 @@ function WeatherApp() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link" href="https://github.com/Yaroslav12321">
               Access article
             </a>
         </div>
@@ -31,7 +31,7 @@ function WeatherApp() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link" href="https://github.com/Yaroslav12321">
               Access article
             </a>
         </div>
@@ -43,7 +43,7 @@ function WeatherApp() {
             elementum. Faucibus faucibus tempor habitasse amet auctor. Sit lorem
             a cursus a.
           </p>
-          <a className="othernews_link" href="#">
+          <a className="othernews_link" href="https://github.com/Yaroslav12321">
               Access article
             </a>
         </div>
