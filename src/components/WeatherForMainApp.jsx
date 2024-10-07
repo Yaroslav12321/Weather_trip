@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import { getWeatherIconClass } from "./WeatherIcon";
 import { DaysOfWeek } from './DateTimeZone';
 import axios from 'axios';
 import '../css/main.css';
 
-const API_KEY=process.env.REACT_APP_API_KEY;
+const API_KEY = process.env.REACT_APP_API_KEY;
 
 const WeatherForMainApp = () => {
   const [weatherData, setWeatherData] = useState(null);
@@ -26,6 +26,7 @@ const WeatherForMainApp = () => {
         setCoordinates({ lat, lon });
         setCity(response.data[0].name);
         setRegion(state || '');
+        setError(null); // Clear error when successful
       } else {
         setError('City not found.');
       }
@@ -34,37 +35,39 @@ const WeatherForMainApp = () => {
     }
   };
 
-  const fetchWeatherData = async () => {
+  const fetchWeatherData = useCallback(async () => {
     try {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${API_KEY}&units=${unit}`
       );
       setWeatherData(response.data);
+      setError(null); // Clear error when successful
     } catch (error) {
       setError('Failed to fetch weather data.');
     }
-  };
+  }, [coordinates, unit]); // Memoize the function based on coordinates and unit
 
-  const fetchForecastData = async () => {
+  const fetchForecastData = useCallback(async () => {
     try {
       const response = await axios.get(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${API_KEY}&units=${unit}`
       );
       setForecastData(response.data);
+      setError(null); // Clear error when successful
     } catch (error) {
       setError('Failed to fetch forecast data.');
     }
-  };
+  }, [coordinates, unit]); // Memoize the function based on coordinates and unit
 
   useEffect(() => {
     fetchWeatherData();
-  }, [coordinates, unit]);
+  }, [fetchWeatherData]);
 
   useEffect(() => {
     if (displayMode === 'today' || displayMode === '5days') {
       fetchForecastData();
     }
-  }, [coordinates, displayMode, unit]);
+  }, [fetchForecastData, displayMode]);
 
   const handleCityChange = (event) => {
     setCity(event.target.value);
@@ -97,9 +100,9 @@ const WeatherForMainApp = () => {
     return date.getHours() === 12;
   });
 
-
   return (
     <div className="weatherAppMain mediasection">
+      {error && <div className="error">{error}</div>} {/* Display error if it exists */}
       <div className="weatherAppMain_head">
         <div>
           <h2 className='weatherAppMain_title'>Weather Forecast</h2>
@@ -133,41 +136,41 @@ const WeatherForMainApp = () => {
       </div>
       <div className="weatherApp_buttons">
         <div>
-        <button className="weatherApp_buttons_day" onClick={() => handleDisplayModeChange('today')}><span className='text'>Today</span></button>
-        <button className="weatherApp_buttons_day" onClick={() => handleDisplayModeChange('5days')}><span className='text'>Week</span></button>
+          <button className="weatherApp_buttons_day" onClick={() => handleDisplayModeChange('today')}><span className='text'>Today</span></button>
+          <button className="weatherApp_buttons_day" onClick={() => handleDisplayModeChange('5days')}><span className='text'>Week</span></button>
         </div>
         <div>
-        <button className="weatherApp_buttons_temp" onClick={() => handleUnitChange('metric')}><span className='text'>°C</span></button>
-        <button className="weatherApp_buttons_temp" onClick={() => handleUnitChange('imperial')}><span className='text'>°F</span></button>
+          <button className="weatherApp_buttons_temp" onClick={() => handleUnitChange('metric')}><span className='text'>°C</span></button>
+          <button className="weatherApp_buttons_temp" onClick={() => handleUnitChange('imperial')}><span className='text'>°F</span></button>
         </div>
       </div>
       <div className="forecast">
         {displayMode === 'today' ? (
           forecastData.list.slice(0, 5).map((item, index) => (
             <div key={index} className="forecast_item">
-                <div>
-              <p className="weatherApp_text darktext smalltext ">{new Date(item.dt_txt).toLocaleTimeString()}</p>
-              <p className="weatherApp_text smalltext">{item.weather[0].description}</p>
-              <p className="weatherApp_text darktext"><i className={`wi wi-thermometer iconstyle`}></i>{Math.floor(item.main.temp)}{temperatureUnitSymbol}</p>
-              <p className="weatherApp_text darktext"><i className={`wi wi-humidity iconstyle`}></i>{item.main.humidity}%</p>
+              <div>
+                <p className="weatherApp_text darktext smalltext ">{new Date(item.dt_txt).toLocaleTimeString()}</p>
+                <p className="weatherApp_text smalltext">{item.weather[0].description}</p>
+                <p className="weatherApp_text darktext"><i className={`wi wi-thermometer iconstyle`}></i>{Math.floor(item.main.temp)}{temperatureUnitSymbol}</p>
+                <p className="weatherApp_text darktext"><i className={`wi wi-humidity iconstyle`}></i>{item.main.humidity}%</p>
               </div>
               <div>
-              <p><i className={`wi wi-${getWeatherIconClass(item.weather[0].id)} iconstyle`}></i></p>
-            </div>
+                <p><i className={`wi wi-${getWeatherIconClass(item.weather[0].id)} iconstyle`}></i></p>
+              </div>
             </div>
           ))
         ) : (
           dailyForecast.map((item, index) => (
             <div key={index} className="forecast_item">
-                <div>
-              <p className="weatherApp_text darktext smalltext ">{new Date(item.dt_txt).toLocaleDateString()}</p>
-              <p className="weatherApp_text smalltext">{item.weather[0].description}</p>
-              <p className="weatherApp_text darktext"><i className={`wi wi-thermometer iconstyle`}></i>{Math.floor(item.main.temp)}{temperatureUnitSymbol}</p>
-              <p className="weatherApp_text darktext"><i className={`wi wi-humidity iconstyle`}></i>{item.main.humidity}%</p>
+              <div>
+                <p className="weatherApp_text darktext smalltext ">{new Date(item.dt_txt).toLocaleDateString()}</p>
+                <p className="weatherApp_text smalltext">{item.weather[0].description}</p>
+                <p className="weatherApp_text darktext"><i className={`wi wi-thermometer iconstyle`}></i>{Math.floor(item.main.temp)}{temperatureUnitSymbol}</p>
+                <p className="weatherApp_text darktext"><i className={`wi wi-humidity iconstyle`}></i>{item.main.humidity}%</p>
               </div>
               <div>
-              <p><i className={`wi wi-${getWeatherIconClass(item.weather[0].id)} iconstyle`}></i></p>
-            </div>
+                <p><i className={`wi wi-${getWeatherIconClass(item.weather[0].id)} iconstyle`}></i></p>
+              </div>
             </div>
           ))
         )}
@@ -177,6 +180,3 @@ const WeatherForMainApp = () => {
 };
 
 export { WeatherForMainApp };
-
-
-
